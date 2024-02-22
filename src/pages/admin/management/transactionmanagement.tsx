@@ -58,7 +58,7 @@ const TransactionManagement = () => {
     const res = await updateOrder({
       // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
       userId: user?._id!,
-      orderId: data?.order._id,
+      orderId: data?.order._id!,
     });
     responseToast(res, navigate, "/admin/transaction");
   };
