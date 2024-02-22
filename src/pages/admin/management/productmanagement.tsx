@@ -70,7 +70,7 @@ const Productmanagement = () => {
     const res = await updateProduct({
       formData,
       userId: user?._id!,
-      productId: data?.product._id,
+      productId: data?.product._id!,
     });
 
     responseToast(res, navigate, "/admin/product");
